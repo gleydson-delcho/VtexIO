@@ -1,9 +1,37 @@
 {
   "store.product": {
     "children": [
+      "condition-layout.product",
       "breadcrumb",
       "flex-layout.row#main"
     ]
+  },
+  "condition-layout.product": {
+    "children": [
+      "condition.product#red-retro-coffee-machine"
+    ]
+  },
+  "condition.product#red-retro-coffee-machine": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "productId",
+          "verb": "is",
+          "object": "3"
+        }
+      ]
+    },
+    "children": [
+      "image#red-retro-coffee-machine-banner"
+    ]
+  },
+  "image#red-retro-coffee-machine-banner": {
+    "props": {
+      "src": "https://appliancetheme.vtexassets.com/assets/app/src/retroimage___92a8271aac7c51d2059193bdbe019016.jpg",
+      "width": "100%",
+      "height": "200px",
+      "blockClass": "cover"
+    }
   },
   "flex-layout.row#main": {
     "props": {
@@ -30,7 +58,8 @@
       "product-price",
       "flex-layout.row#qty-sku",
       "shipping-simulator",
-      "buy-button"
+      "buy-button",
+      "share#default"
     ]
   },
   "product-price": {
@@ -44,5 +73,15 @@
       "sku-selector",
       "product-quantity"
     ]
+  },
+  "share#default": {
+    "props": {
+      "social": {
+        "Facebook": true,
+        "WhatsApp": true,
+        "Twitter": false,
+        "Pinterest": true
+      }
+    }
   }
 }
